@@ -8,7 +8,7 @@ AI helped me implement my ideas, understand technical concepts, troubleshoot err
 
 ## 2. AI Tools Used
 
-I used ChatGPT as an AI-assisted development tool for:
+I used ChatGPT and GitHub Copilot as AI-assisted development tools. GitHub Copilot was used in Visual Studio Code as a coding assistant to inspect project files, explain errors, suggest and apply code changes, and verify builds. AI assistance included:
 
 - Understanding implementation approaches.
 - Generating and refining code examples.
@@ -90,6 +90,10 @@ These are the requirements I intended the application to follow. Their actual en
 ### Architecture and integration
 
 I chose a frontend-backend structure in which React communicates with Spring Boot through REST APIs, while PostgreSQL stores application data. AI assisted with implementation and troubleshooting within this architecture.
+
+### Deployment platform
+
+I used Render to deploy the application. The React frontend is deployed as a Render Static Site, and the Spring Boot REST API is deployed as a Render web service using the project Dockerfile. The frontend is configured to call the deployed backend API. Render is the hosting and deployment platform; it is not an AI tool.
 
 ## 7. Review and Verification
 

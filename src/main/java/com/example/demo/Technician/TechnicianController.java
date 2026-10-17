@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/technicians")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"https://maintena-1-1wd3.onrender.com", "http://localhost:5173"})
 public class TechnicianController {
 
     private final TechnicianService technicianService;

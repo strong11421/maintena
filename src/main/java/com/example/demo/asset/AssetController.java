@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/assets")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"https://maintena-1-1wd3.onrender.com", "http://localhost:5173"})
 public class AssetController {
 
     private final AssetService assetService;

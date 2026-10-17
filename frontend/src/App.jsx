@@ -47,7 +47,10 @@ import './App.css'
 const { Header, Sider, Content } = Layout
 const { Title, Text, Paragraph } = Typography
 
-const API_BASE = 'http://localhost:8080/api'
+const API_BASE = import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD
+    ? 'https://maintena-kpqm.onrender.com/api'
+    : 'http://localhost:8080/api')
 
 const STATUS_OPTIONS = [
   { value: 'OPEN', label: 'Open' },
@@ -208,7 +211,7 @@ const [messageApi, messageContextHolder] = message.useMessage()
       if (showMessage) messageApi.success('Dashboard data refreshed')
     } catch (error) {
       setPageError(
-        `${error.message}. Confirm that Spring Boot is running on http://localhost:8080.`
+        `${error.message}. Confirm that the backend service is running and its API URL is configured.`
       )
     } finally {
       setLoading(false)
